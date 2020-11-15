@@ -1,7 +1,10 @@
-function textInput() {    
-    name.textContent = input.value ? input.value : 'незнакомец';
-}
 const input = document.querySelector('#name-input');
-const output = document.querySelector('#name-output');
+const name = document.querySelector('#name-output');
+function textInput() {    
+ if(input.value){
+name.textContent = input.value;
+}
+name.textContent = "незнакомец";
+}
 
 input.addEventListener('keyup', textInput);
